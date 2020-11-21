@@ -1,0 +1,178 @@
+#container {
+  border: 1px solid black;
+}
+.component-container {
+  text-align: left;
+  margin: 20px;
+  display: inline-block;
+  vertical-align: top;
+}
+input {
+  width: 500px;
+}
+.urls {
+  margin-top: 15px;
+}
+select {
+  width: 100px;
+}
+
+.loader-container {
+  background-color: rgba(0, 0, 0, 0.5);
+  width: 100%;
+  height: 100%;
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 10001;
+}
+
+.loader,
+.loader:after,
+.loader:before {
+  background: #fff;
+  -webkit-animation: load1 1s infinite ease-in-out;
+  animation: load1 1s infinite ease-in-out;
+  width: 1em;
+  height: 4em;
+}
+
+.loader:after,
+.loader:before {
+  position: absolute;
+  top: 0;
+  content: "";
+}
+
+.loader:before {
+  left: -1.5em;
+  -webkit-animation-delay: -0.32s;
+  animation-delay: -0.32s;
+}
+
+.loader {
+  text-indent: -9999em;
+  position: relative;
+  font-size: 11px;
+  -webkit-transform: translateZ(0);
+  -ms-transform: translateZ(0);
+  transform: translateZ(0);
+  -webkit-animation-delay: -0.16s;
+  animation-delay: -0.16s;
+  margin-left: -0.5em;
+  margin-top: -2em;
+  top: 50%;
+  left: 50%;
+}
+
+.loader:after {
+  left: 1.5em;
+}
+
+.sk-wave {
+  left: 50%;
+  top: 40%;
+  width: 75px;
+  height: 60px;
+  font-size: 12px;
+  position: fixed;
+  z-index: 1000;
+}
+
+.sk-wave .sk-rect {
+  height: 100%;
+  width: 6px;
+  display: inline-block;
+  -webkit-animation: sk-waveStretchDelay 1.2s infinite ease-in-out;
+  animation: sk-waveStretchDelay 1.2s infinite ease-in-out;
+}
+
+.sk-wave .sk-rect:nth-child(odd) {
+  background-color: #1abfdf;
+}
+
+.content-header,
+.sk-wave .sk-rect:nth-child(even) {
+  background-color: #293342;
+}
+
+.sk-wave .sk-rect1 {
+  -webkit-animation-delay: -1.2s;
+  animation-delay: -1.2s;
+}
+
+.sk-wave .sk-rect2 {
+  -webkit-animation-delay: -1.1s;
+  animation-delay: -1.1s;
+}
+
+.sk-wave .sk-rect3 {
+  -webkit-animation-delay: -1s;
+  animation-delay: -1s;
+}
+
+.sk-wave .sk-rect4 {
+  -webkit-animation-delay: -0.9s;
+  animation-delay: -0.9s;
+}
+
+.sk-wave .sk-rect5 {
+  -webkit-animation-delay: -0.8s;
+  animation-delay: -0.8s;
+}
+
+@-webkit-keyframes sk-waveStretchDelay {
+  0%,
+  100%,
+  40% {
+    -webkit-transform: scaleY(0.4);
+    transform: scaleY(0.4);
+  }
+
+  20% {
+    -webkit-transform: scaleY(1);
+    transform: scaleY(1);
+  }
+}
+
+@keyframes sk-waveStretchDelay {
+  0%,
+  100%,
+  40% {
+    -webkit-transform: scaleY(0.4);
+    transform: scaleY(0.4);
+  }
+
+  20% {
+    -webkit-transform: scaleY(1);
+    transform: scaleY(1);
+  }
+}
+
+@-webkit-keyframes load1 {
+  0%,
+  100%,
+  80% {
+    box-shadow: 0 0 #fff;
+    height: 4em;
+  }
+
+  40% {
+    box-shadow: 0 -2em #fff;
+    height: 5em;
+  }
+}
+
+@keyframes load1 {
+  0%,
+  100%,
+  80% {
+    box-shadow: 0 0 #fff;
+    height: 4em;
+  }
+
+  40% {
+    box-shadow: 0 -2em #fff;
+    height: 5em;
+  }
+}
